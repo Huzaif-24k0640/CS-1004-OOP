@@ -2,28 +2,31 @@
 #include <string>
 using namespace std;
 
-void eventRegistration (string arr[])
+const int MAX = 5;
+
+void eventRegistration (string eventOne [], string eventTwo []) 
 {
-	for (int i = 0; i < 5; i++)
-	{
-		cout << "Enter name of " << i + 1 << " participant: ";
-		cin >> arr[i];
-		cout << endl;
-	}
-}
+    	cout << "\nEnter name of participants for first Event:\n";
+    	for (int i = 0; i < MAX; i++) 
+    	{
+        	cout << "\nEnter name of participant " << i + 1 << ": ";
+        	cin >> eventOne[i];
+    	}//end for
+
+    	cout << "\nEnter name of participants for second Event:\n";
+    	for (int i = 0; i < MAX; i++) 
+    	{
+        	cout << "\nEnter name of participant " << i + 1 << ": ";
+		cin >> eventTwo [i];
+	}//end for
+
+	return;
+}//end event registration
 
 int main ()
 {
-	string eventOne[5];
-	string eventTwo[5];
-  
-  //for first event
-	cout << "\nEvent one registration:\n" << endl;
-	eventRegistration (eventOne);
+    	string eventOne [MAX], eventTwo [MAX];
+    	eventRegistration (eventOne, eventTwo);
 
-  //for second event 
-	cout << "\nEvent two registration:\n" << endl;
-	eventRegistration (eventOne);
-	
 	return 0;
-}
+}//end main
