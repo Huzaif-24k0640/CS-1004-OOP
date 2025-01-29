@@ -18,7 +18,6 @@ void inputAQI(int aqi[CITIES][DAYS_IN_WEEK])
             		cin >> aqi[i][j];
         	}//end for
     	}//end for
-	return;
 }//end function
 
 void calculateWeeklyAverages(const int aqi[CITIES][DAYS_IN_WEEK], float weeklyAvg[CITIES][2]) 
@@ -50,14 +49,63 @@ void findWorstCity(const float weeklyAvg[CITIES][2])
     	cout << "\nCity with the worst air quality: City " << (worstCityIndex + 1) << " (Average AQI: " << highestAvg << ")\n";
 }//end function
 
+void identifyCriticalDays(const int aqi[CITIES][DAYS_IN_WEEK]) 
+{
+    	cout << "\nCritical Pollution Days where (AQI > 150):\n" << endl;
+    	for (int i = 0; i < CITIES; i++) {
+        	cout << "City " << (i + 1) << ": ";
+        	for (int j = 0; j < DAYS_IN_WEEK; j++) 
+		{
+            		if (aqi[i][j] > 150) {
+                	cout << "Day " << (j + 1) << " ";
+            		}//end if
+        	}//end for
+        	cout << endl;
+    	}//end for
+}//end function
+
+void visualizeData(const int aqi[CITIES][DAYS_IN_WEEK]) 
+{
+    	cout << "\nAQI Visualization:\n";
+    	for (int i = 0; i < CITIES; i++) 
+	{
+        	cout << "City " << (i + 1) << ": ";
+        	for (int j = 0; j < DAYS_IN_WEEK; j++) 
+		{
+            		int numStars = aqi[i][j] / 50;
+            		if (numStars > 10) 
+            		{
+                		numStars = 10;
+                		cout << "(Max) ";
+            		}
+            		for (int k = 0; k < numStars; k++) 
+			{
+                		cout << "*";
+            		}//end for
+            		cout << " ";
+        	}//end for
+        	cout << endl;
+    	}//end for
+}//end function
+
 int main ()
 {
     	int aqi[CITIES][DAYS_IN_WEEK];
     	float weeklyAvg[CITIES][2] = {0}; 
+	
+	for (int i = 0; i < CITIES; i++)
+	{
+		for (int j = 0; j < DAYS_IN_WEEK; j++)
+		{
+			aqi[i][j] = 0;
+		}//end for
+	}//end for
 
 	inputAQI(aqi);
     	calculateWeeklyAverages(aqi, weeklyAvg);
     	findWorstCity(weeklyAvg);
+    	identifyCriticalDays(aqi);
+    	visualizeData(aqi);
 
 	return 0;
 }//end main
