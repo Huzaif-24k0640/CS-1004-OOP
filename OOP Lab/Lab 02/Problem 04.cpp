@@ -23,13 +23,11 @@ void inputStrings(char** arr, int numStrings) {
     }
 }
 
-
 void swapStrings(char*& str1, char*& str2) {
     char* temp = str1;
     str1 = str2;
     str2 = temp;
 }
-
 
 void sortStrings(char** arr, int numStrings) {
     for (int i = 0; i < numStrings - 1; ++i) {
@@ -45,14 +43,12 @@ void sortStrings(char** arr, int numStrings) {
     }
 }
 
-
 void displayStrings(char** arr, int numStrings) {
     cout << "\nSorted Strings:\n";
     for (int i = 0; i < numStrings; ++i) {
         cout << arr[i] << endl;
     }
 }
-
 
 int main() {
     int numStrings, maxLength;
