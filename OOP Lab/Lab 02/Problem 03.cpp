@@ -22,7 +22,6 @@ struct Employee {
     double hourlyRate;
 };
 
-
 void inputEmployees(Employee* employees, int numEmployees) {
     for (int i = 0; i < numEmployees; i++) {
         cout << "Enter details for Employee " << i + 1 << ":\n";
@@ -34,7 +33,6 @@ void inputEmployees(Employee* employees, int numEmployees) {
         cin >> employees[i].hourlyRate;
     }
 }
-
 
 void displaySalaries(Employee* employees, int numEmployees) {
     cout << "\nEmployee Salary Details:\n";
