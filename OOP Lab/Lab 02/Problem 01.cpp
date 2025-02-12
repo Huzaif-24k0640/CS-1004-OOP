@@ -23,7 +23,6 @@ struct Book {
     int year;
 };
 
-
 void inputBooks(Book* books, int numBooks) {
     for (int i = 0; i < numBooks; i++) {
         cout << "Enter details for book " << i + 1 << ":\n";
@@ -35,7 +34,6 @@ void inputBooks(Book* books, int numBooks) {
         cin >> books[i].year;
     }
 }
-
 
 void displayBooksAfterYear(Book* books, int numBooks, int year) {
     cout << "\nBooks published after " << year << ":\n";
