@@ -24,14 +24,12 @@ int** allocateMatrix(int rows, int cols) {
     return matrix;
 }
 
-
 void deallocateMatrix(int** matrix, int rows) {
     for (int i = 0; i < rows; ++i) {
         delete[] matrix[i];
     }
     delete[] matrix;
 }
-
 
 void inputMatrix(int** matrix, int rows, int cols, const string& name) {
     cout << "Enter elements for " << name << " (" << rows << "x" << cols << "):\n";
@@ -43,7 +41,6 @@ void inputMatrix(int** matrix, int rows, int cols, const string& name) {
     }
 }
 
-
 void displayMatrix(int** matrix, int rows, int cols, const string& name) {
     cout << "\n" << name << ":\n";
     for (int i = 0; i < rows; ++i) {
@@ -53,7 +50,6 @@ void displayMatrix(int** matrix, int rows, int cols, const string& name) {
         cout << endl;
     }
 }
-
 
 int** addMatrices(int** A, int** B, int rows, int cols) {
     int** result = allocateMatrix(rows, cols);
@@ -65,7 +61,6 @@ int** addMatrices(int** A, int** B, int rows, int cols) {
     return result;
 }
 
-
 int** subtractMatrices(int** A, int** B, int rows, int cols) {
     int** result = allocateMatrix(rows, cols);
     for (int i = 0; i < rows; ++i) {
@@ -75,7 +70,6 @@ int** subtractMatrices(int** A, int** B, int rows, int cols) {
     }
     return result;
 }
-
 
 int main() {
     int rows, cols;
