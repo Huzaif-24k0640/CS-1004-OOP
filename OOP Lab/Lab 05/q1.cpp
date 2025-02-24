@@ -24,7 +24,7 @@ public:
         cout << "Apartment ID: " << id << endl;
         cout << "Address: " << address << endl;
         cout << "Owner: " << *owner << endl;
-        cout << "----------------------" << endl;
+        cout << endl;
     }
 
     ~Apartment() {
