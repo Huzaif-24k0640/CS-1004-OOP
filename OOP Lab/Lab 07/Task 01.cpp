@@ -83,10 +83,10 @@ public:
 };
 
 int main() {
-    Light light1(101, "Living Room Light", "Living Room", 75, "Warm White");
-    Thermostat thermostat1(102, "Hallway Thermostat", "Hallway", 22.5f, "Cooling", 24.0f);
-    SecurityCamera camera1(103, "Front Door Camera", "Front Door", "1080p", true);
-    SmartPlug plug1(104, "TV Plug", "Living Room", 50.5, 2);
+    Light light1(1, "Living Room Light", "Living Room", 75, "Warm White");
+    Thermostat thermostat1(2, "Hallway Thermostat", "Hallway", 22.5f, "Cooling", 24.0f);
+    SecurityCamera camera1(3, "Front Door Camera", "Front Door", "1080p", true);
+    SmartPlug plug1(4, "TV Plug", "Living Room", 50.5, 2);
 
     light1.turnOn();
     thermostat1.turnOn();
