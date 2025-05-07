@@ -1,0 +1,3 @@
+AutonomousCar,1001,Tesla Model S,2023,SoftwareVersion:3.5,Certified
+ElectricVehicle,1002,Nissan Leaf,2022,BatteryCapacity:40,Certified
+HybridTruck,HT001,Ford F-150 Hybrid,2024,Cargo:2000|Battery:300,Certified
