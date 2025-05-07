@@ -17,7 +17,7 @@ int main() {
 
     	ofstream outFile("inventory.dat", ios::binary);
     	if (!outFile) {
-        	cerr << "Error: Could not open file for writing." << endl;
+        	cerr << "Could not open file for writing." << endl;
         	return 1;
     	}
     	outFile.write(reinterpret_cast<char*>(&itemOut), sizeof(InventoryItem));
@@ -26,14 +26,14 @@ int main() {
     	InventoryItem itemIn;
     	ifstream inFile("inventory.dat", ios::binary);
     	if (!inFile) {
-        	cerr << "Error: Could not open file for reading." << endl;
+        	cerr << "Could not open file for reading." << endl;
         	return 1;
     	}
     	inFile.read(reinterpret_cast<char*>(&itemIn), sizeof(InventoryItem));
     	inFile.close();
 
-    	cout << "Loaded Item ID: " << itemIn.itemID << endl;
-    	cout << "Loaded Item Name: " << itemIn.itemName << endl;
+    	cout << "Item ID: " << itemIn.itemID << endl;
+    	cout << "Item Name: " << itemIn.itemName << endl;
 
     	return 0;
 }
